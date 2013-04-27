@@ -1,7 +1,7 @@
 tugg-api - Tugg API node module
 ====================
 
-Calls to the [Tugg](http://www.tugg.com/api) API for [Nodejs](http://nodejs.org).
+Access the [Tugg](http://www.tugg.com/api) API with [Nodejs](http://nodejs.org).
 
 Installation
 ------------
@@ -12,7 +12,7 @@ You can also install via git by cloning: `git clone https://github.com/lukewendl
 Usage
 -----
     var TuggApi = require('./index');
-    var helper = require('./api_helper');
+    var helper = require('./lib/api_helper');
 
     var tugg = new TuggApi({api_key: API_KEY});
 
