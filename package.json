@@ -1,0 +1,18 @@
+{
+  "name": "tugg-api",
+  "version": "0.1.0",
+  "description": "Simple node module to access Tugg.com API",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/lukewendling/tugg-api"
+  },
+  "keywords": [
+    "tugg",
+    "api"
+  ],
+  "author": "Luke Wendling",
+  "license": "BSD"
+}
