@@ -16,8 +16,8 @@ Usage
 
     var tugg = new TuggApi({api_key: API_KEY});
 
-    tugg.event(TUGG_EVENT_ID, function(err, res) {
-      var event = helper.parseJSONResponse('event', res);
+    tugg.event(TUGG_EVENT_ID, function(err, response) {
+      var event = helper.trimNamespace('event', response);
       console.log(event);
     });
 

@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "description": "Simple node module to access Tugg.com API",
   "main": "index.js",
-  "scripts": {
-  },
   "repository": {
     "type": "git",
     "url": "http://github.com/lukewendling/tugg-api"
@@ -14,5 +12,8 @@
     "api"
   ],
   "author": "Luke Wendling",
-  "license": "BSD"
+  "license": "BSD",
+  "devDependencies": {
+    "nodeunit": ">=0.6.2"
+  }
 }

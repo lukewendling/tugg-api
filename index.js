@@ -60,19 +60,19 @@ TuggApi.prototype._get = function(path, cb) {
   };
 
   req = https.request(options, function(res) {
-      var data = [];
-      res
-      .on('data', function(chunk) { data.push(chunk); })
-      .on('end', function() {
-        var urldata = data.join('').trim();
-        var result;
-        try {
-          result = JSON.parse(urldata);
-        } catch (exp) {
-          result = {'status_code': 500, 'status_text': 'JSON Parse Failed'};
-        }
-        cb(null, result);
-      });
+    var data = [];
+    res
+    .on('data', function(chunk) { data.push(chunk); })
+    .on('end', function() {
+      data = data.join('').trim();
+      var result;
+      try {
+        result = JSON.parse(data);
+      } catch (exp) {
+        result = {'status_code': 500, 'status_text': 'JSON Parse Failed'};
+      }
+      cb(null, result);
+    });
   })
   req.end();
 
