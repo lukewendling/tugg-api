@@ -8,16 +8,19 @@ var https = require('https');
 
 /**
  * The TuggApi constructor
- * @param {Object} valiad options: api_key, api_version, hostname, port
+ * @param {String} api_key
  */
-var TuggApi = function(options) {
-  this.config = {
-    api_key: options.api_key,
-    version: options.api_version || '1',
+var TuggApi = function(api_key) {
+  this.api_key = api_key;
+
+  var config = {
+    version: '1',
     format: 'json',
-    hostname: options.hostname || 'www.tugg.com',
-    port: options.port || '443'
+    hostname: 'www.tugg.com',
+    port: 443
   };
+
+  this.config = config;
 
   return this;
 };
@@ -53,7 +56,7 @@ TuggApi.prototype.event = function(id, cb) {
  */
 TuggApi.prototype._get = function(path, cb) {
   var options = {
-    headers: {'TUGG-API-KEY': this.config.api_key},
+    headers: {'TUGG-API-KEY': this.api_key, 'TUGG-API-VERSION': this.config.version},
     hostname: this.config.hostname,
     port: this.config.port,
     path: '/api/' + path + '?format=' + this.config.format

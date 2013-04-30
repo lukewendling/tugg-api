@@ -14,7 +14,7 @@ Usage
     var TuggApi = require('./index');
     var helper = require('./lib/api_helper');
 
-    var tugg = new TuggApi({api_key: API_KEY});
+    var tugg = new TuggApi(API_KEY);
 
     tugg.event(TUGG_EVENT_ID, function(err, response) {
       var event = helper.trimNamespace('event', response);
