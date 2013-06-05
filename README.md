@@ -27,3 +27,4 @@ This module is limited to the following API methods:
 
 * events
 * titles
+* page_shares
