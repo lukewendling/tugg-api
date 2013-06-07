@@ -1,28 +1,34 @@
-tugg-api - Tugg API node module
-====================
+# tugg-api - Tugg API node module [![Build Status](https://travis-ci.org/lukewendling/tugg-api.png)](https://travis-ci.org/lukewendling/tugg-api)
 
-Access the [Tugg](http://www.tugg.com/api) API with [Nodejs](http://nodejs.org).
+> Access the [Tugg](http://www.tugg.com/api) API with [Nodejs](http://nodejs.org).
 
-Installation
-------------
+
+## Installation
+
 To install via NPM type the following: `npm install tugg-api`
 
-You can also install via git by cloning: `git clone https://github.com/lukewendling/tugg-api.git /path/to/project`
+You can also install via git by cloning:
 
-Usage
------
-    var TuggApi = require('./index');
-    var helper = require('./lib/api_helper');
+```shell
+git clone https://github.com/lukewendling/tugg-api.git /path/to/project`
+```
 
-    var tugg = new TuggApi(API_KEY);
+## Usage
 
-    tugg.event(TUGG_EVENT_ID, function(err, response) {
-      var event = helper.trimNamespace('event', response);
-      console.log(event);
-    });
+```js
+var TuggApi = require('./index');
+var helper = require('./lib/api_helper');
 
-Current Features
----------------
+var tugg = new TuggApi(API_KEY);
+
+tugg.event(TUGG_EVENT_ID, function(err, response) {
+  var event = helper.trimNamespace('event', response);
+  console.log(event);
+});
+```
+
+## Current Features
+
 This module is limited to the following API methods:
 
 * events
