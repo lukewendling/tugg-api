@@ -1,6 +1,6 @@
 {
   "name": "tugg-api",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Simple node module to access Tugg.com API",
   "main": "index.js",
   "repository": {
